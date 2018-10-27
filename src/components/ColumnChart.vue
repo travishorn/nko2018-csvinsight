@@ -75,12 +75,11 @@ export default {
         .call(currentG => currentG.select('.domain').remove());
     },
     plotData() {
-      console.log('Plot data called');
       if (this.axes.x && this.axes.y) {
-        console.log('Plotting data');
         const rect = this.columns.selectAll('rect').data(this.chartData);
 
         rect.exit().remove();
+
         rect.enter()
           .append('rect')
           .attr('x', d=> this.x(d[this.axes.x]))
@@ -99,7 +98,7 @@ export default {
   mounted() {
     this.xAxisG = this.chart.append('g').call(this.xAxis);
     this.yAxisG = this.chart.append('g').call(this.yAxis);
-    this.columns = this.chart.append('g');
+    this.columns = this.chart.append('g').attr('fill', '#C0392B');
   },
 };
 </script>
