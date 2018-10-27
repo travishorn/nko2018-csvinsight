@@ -4,6 +4,7 @@
 
 <script>
 import * as d3 from 'd3';
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'ColumnChart',
@@ -12,6 +13,11 @@ export default {
       width: 1000,
       height: 500,
     };
+  },
+  computed: {
+    ...mapGetters([
+      'axes',
+    ]),
   },
   mounted() {
     const margin = {
