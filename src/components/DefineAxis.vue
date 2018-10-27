@@ -1,7 +1,7 @@
 <template>
   <div class="form-group">
-    <label :for="`${axis}Axis`">{{ axis | firstCap }} axis</label>
-    <select :id="`${axis}Axis`" class="form-control">
+    <label :for="controlId">{{ axis | firstCap }} axis</label>
+    <select :id="controlId" class="form-control">
       <option></option>
     </select>
   </div>
@@ -15,6 +15,11 @@ export default {
   props: ['axis'],
   filters: {
     firstCap,
+  },
+  computed: {
+    controlId() {
+      return `${this.axis}Axis`;
+    },
   },
 };
 </script>
