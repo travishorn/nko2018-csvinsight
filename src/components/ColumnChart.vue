@@ -85,7 +85,7 @@ export default {
           .attr('x', d => this.x(d[this.axes.x]))
           .attr('y', d => this.y(d[this.axes.y]))
           .attr('height', d => this.y(0) - this.y(d[this.axes.y]))
-          .attr('width', this.x.bandwidth());;
+          .attr('width', this.x.bandwidth());
 
 
         rect
