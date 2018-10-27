@@ -28,7 +28,7 @@ export default {
           key: this.axis,
           value,
         });
-      }
+      },
     },
     controlId() { return `${this.axis}Axis`; },
   },
