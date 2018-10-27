@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "start": "npm run build && serve -l 80 -s dist"
+    "postinstall": "npm run build",
+    "start": "serve -l $PORT -s dist"
   },
   "dependencies": {
     "bootstrap": "^4.1.3",
