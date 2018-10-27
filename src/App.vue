@@ -4,17 +4,21 @@
       <img src="./assets/logo.png" alt="CSV">
       Insight
     </h1>
-    <HelloWorld msg="Welcome!" />
+    <p>To do: file selector</p>
+    <p>To do: configuration</p>
+    <p>To do: charts</p>
+
+    <KnockoutVote />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import KnockoutVote from './components/KnockoutVote.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    KnockoutVote,
   },
 };
 </script>
