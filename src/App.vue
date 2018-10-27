@@ -1,11 +1,11 @@
 <template>
   <div class="container my-3 my-md-5">
-    <h1>
+    <h1 class="mb-3 mb-md-5">
       <img src="./assets/logo.png" alt="CSV">
       Insight
     </h1>
-    <FileSelector />
-    <DefineData />
+    <FileSelector class="mb-3 mb-md-5" />
+    <DefineData class="mb-3 mb-md-5" />
     <PlotData />
 
     <KnockoutVote />
