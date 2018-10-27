@@ -19,6 +19,8 @@ export default {
         left: 50,
       },
       xAxisG: null,
+      yAxisG: null,
+      columns: null,
     };
   },
   computed: {
@@ -38,14 +40,26 @@ export default {
         .padding(0.1);
     },
     y() {
+      const data = this.chartData || [];
+
       return d3.scaleLinear()
-        .domain([0, d3.max(this.chartData, d => d[this.axes.y])]).nice()
+        .domain([0, d3.max(data, d => d[this.axes.y])]).nice()
         .range([this.height - this.margin.bottom, this.margin.top]);
     },
   },
   watch: {
-    x() { this.xAxisG.call(this.xAxis); },
-    y() { this.yAxisG.call(this.yAxis); },
+    x() {
+      if (this.axes.x) {
+        this.xAxisG.call(this.xAxis);
+        this.plotData();
+      }
+    },
+    y() {
+      if (this.axes.y) {
+        this.yAxisG.call(this.yAxis);
+        this.plotData();
+      }
+    },
   },
   methods: {
     xAxis(g) {
@@ -57,12 +71,35 @@ export default {
     yAxis(g) {
       return g
         .attr('transform', `translate(${this.margin.left}, 0)`)
-        .call(d3.axisLeft(this.y));
+        .call(d3.axisLeft(this.y))
+        .call(currentG => currentG.select('.domain').remove());
+    },
+    plotData() {
+      console.log('Plot data called');
+      if (this.axes.x && this.axes.y) {
+        console.log('Plotting data');
+        const rect = this.columns.selectAll('rect').data(this.chartData);
+
+        rect.exit().remove();
+        rect.enter()
+          .append('rect')
+          .attr('x', d=> this.x(d[this.axes.x]))
+          .attr('y', d=> this.y(d[this.axes.y]))
+          .attr('height', d=> this.y(0) - this.y(d[this.axes.y]))
+          .attr('width', this.x.bandwidth());
+
+        rect
+          .attr('x', d=> this.x(d[this.axes.x]))
+          .attr('y', d=> this.y(d[this.axes.y]))
+          .attr('height', d=> this.y(0) - this.y(d[this.axes.y]))
+          .attr('width', this.x.bandwidth());
+      }
     },
   },
   mounted() {
     this.xAxisG = this.chart.append('g').call(this.xAxis);
     this.yAxisG = this.chart.append('g').call(this.yAxis);
+    this.columns = this.chart.append('g');
   },
 };
 </script>

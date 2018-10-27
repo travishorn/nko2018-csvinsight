@@ -28,7 +28,7 @@ export default new Vuex.Store({
       return getters.parsed.meta.fields;
     },
     chartData(state, getters) {
-      if (!getters.parsed) return null;
+      if (!getters.parsed) return [];
       return getters.parsed.data;
     },
     axes(state) { return state.axes; },
