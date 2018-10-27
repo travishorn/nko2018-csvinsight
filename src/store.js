@@ -7,19 +7,20 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    file: null,
+    fileData: null,
   },
   getters: {
 
   },
   mutations: {
-    SET_FILE(state, file) {
-      state.file = file;
-    },
+    SET_FILE_DATA(state, data) { state.fileData = data; },
   },
   actions: {
     changeFile(context, file) {
-      context.commit('SET_FILE', file);
+      const reader = new FileReader();
+
+      reader.onload = () => context.commit('SET_FILE_DATA', reader.result);
+      reader.readAsText(file);
     },
   },
 });
