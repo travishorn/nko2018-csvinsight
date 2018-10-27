@@ -4,7 +4,7 @@
       <img src="./assets/logo.png" alt="CSV">
       Insight
     </h1>
-    <p>To do: file selector</p>
+    <FileSelector />
     <p>To do: configuration</p>
     <p>To do: charts</p>
 
@@ -13,12 +13,14 @@
 </template>
 
 <script>
+import FileSelector from './components/FileSelector.vue';
 import KnockoutVote from './components/KnockoutVote.vue';
 
 export default {
   name: 'App',
   components: {
     KnockoutVote,
+    FileSelector,
   },
 };
 </script>
