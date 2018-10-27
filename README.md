@@ -26,5 +26,7 @@ npm run lint
 
 ## Built with
 
-- [Vue](https://vuejs.org/) - User interface
+- [Bootstrap](https://getbootstrap.com) - User interface styling
+- [Icons8](https://icons8.com/) - Project icon
+- [Vue](https://vuejs.org/) - User interface management
 - [Vuex](https://vuex.vuejs.org/) - State management
