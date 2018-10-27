@@ -2,17 +2,24 @@
   <div>
     <h2>Define data</h2>
 
-    <div class="form-group">
-      <label for="xAxis">X axis</label>
-      <select class="form-control">
-        <option></option>
-      </select>
+    <div class="row">
+      <div class="col-md-6">
+        <DefineAxis axis="x" />
+      </div>
+      <div class="col-md-6">
+        <DefineAxis axis="y" />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import DefineAxis from './DefineAxis.vue';
+
 export default {
   name: 'DefineData',
+  components: {
+    DefineAxis,
+  },
 };
 </script>
