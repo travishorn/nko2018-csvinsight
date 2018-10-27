@@ -1,6 +1,6 @@
 <template>
   <p class="text-muted text-center">
-    Made for Node Knockout<br>
+    Made for <a href="#">Node Knockout</a><br>
     <a class="btn btn-sm btn-light" href="https://www.nodeknockout.com/entries/79-fixed-measure/vote">
       Vote for this project
     </a>
@@ -12,3 +12,7 @@ export default {
   name: 'KnockoutVote',
 };
 </script>
+
+<style>
+  .text-muted a { color: inherit; }
+</style>
