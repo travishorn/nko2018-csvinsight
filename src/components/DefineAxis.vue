@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import firstCap from '../filters/firstCap.js';
+import firstCap from '../filters/firstCap';
 
 export default {
   name: 'DefineAxis',
