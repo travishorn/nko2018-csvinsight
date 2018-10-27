@@ -1,4 +1,8 @@
-# nko2018-csvinsight
+# CSV Insight
+
+## Description
+
+Quickly visualize comma separated data.
 
 ## Project setup
 ```
@@ -19,3 +23,8 @@ npm run build
 ```
 npm run lint
 ```
+
+## Built with
+
+- [Vue](https://vuejs.org/) - User interface
+- [Vuex](https://vuex.vuejs.org/) - State management
