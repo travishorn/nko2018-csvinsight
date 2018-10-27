@@ -82,15 +82,16 @@ export default {
 
         rect.enter()
           .append('rect')
-          .attr('x', d=> this.x(d[this.axes.x]))
-          .attr('y', d=> this.y(d[this.axes.y]))
-          .attr('height', d=> this.y(0) - this.y(d[this.axes.y]))
-          .attr('width', this.x.bandwidth());
+          .attr('x', d => this.x(d[this.axes.x]))
+          .attr('y', d => this.y(d[this.axes.y]))
+          .attr('height', d => this.y(0) - this.y(d[this.axes.y]))
+          .attr('width', this.x.bandwidth());;
+
 
         rect
-          .attr('x', d=> this.x(d[this.axes.x]))
-          .attr('y', d=> this.y(d[this.axes.y]))
-          .attr('height', d=> this.y(0) - this.y(d[this.axes.y]))
+          .attr('x', d => this.x(d[this.axes.x]))
+          .attr('y', d => this.y(d[this.axes.y]))
+          .attr('height', d => this.y(0) - this.y(d[this.axes.y]))
           .attr('width', this.x.bandwidth());
       }
     },
@@ -99,6 +100,7 @@ export default {
     this.xAxisG = this.chart.append('g').call(this.xAxis);
     this.yAxisG = this.chart.append('g').call(this.yAxis);
     this.columns = this.chart.append('g').attr('fill', '#C0392B');
+    this.plotData();
   },
 };
 </script>
