@@ -2,6 +2,7 @@
 
 import Vue from 'vue';
 import Vuex from 'vuex';
+import { parse } from 'papaparse';
 
 Vue.use(Vuex);
 
@@ -14,11 +15,17 @@ export default new Vuex.Store({
     },
   },
   getters: {
-    headers(state) {
+    parsed(state) {
       if (!state.fileData) return null;
 
-      const rows = state.fileData.split('\n')[0];
-      return rows.split(',');
+      return parse(state.fileData, {
+        header: true,
+        dynamicTyping: true,
+      });
+    },
+    headers(state, getters) {
+      if (!getters.parsed) return null;
+      return getters.parsed.meta.fields;
     },
     axes(state) { return state.axes; },
   },
