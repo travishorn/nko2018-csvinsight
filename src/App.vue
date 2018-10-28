@@ -43,3 +43,11 @@ export default {
   },
 };
 </script>
+
+<style>
+  body {
+    font-family: Lato, sans-serif;
+    background-color: #F4F4F4;
+    color: #3D3D3B;
+  }
+</style>
