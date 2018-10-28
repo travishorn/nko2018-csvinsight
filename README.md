@@ -2,7 +2,7 @@
 
 Quickly visualize comma-separated data.
 
-![Screenshot](screenshot-201810280940.png)
+![Screenshot](screenshot-201810280944.png)
 
 ## Getting Started
 
