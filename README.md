@@ -2,6 +2,8 @@
 
 Quickly visualize comma-separated data.
 
+![Screenshot](screenshot-201810280940.png)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for
@@ -71,6 +73,7 @@ The built app in `dist/` is served at the port in the `PORT` environment variabl
 
 - [Bootstrap](https://getbootstrap.com) - User interface styling
 - [D3](https://d3js.org/) - Data visualization
+- [Google Fonts](https://fonts.google.com) - The main font, Lato
 - [Icons8](https://icons8.com/) - Project icon
 - [Papa Parse](https://www.papaparse.com/) - In-browser CSV parser
 - [Serve](https://github.com/zeit/serve#readme) - Static site server
