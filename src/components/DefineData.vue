@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Define data</h2>
+    <h2>2. Define data</h2>
 
     <div class="row">
       <div class="col-md-6">

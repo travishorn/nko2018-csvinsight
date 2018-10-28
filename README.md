@@ -1,6 +1,6 @@
 # CSV Insight
 
-Quickly visualize comma separated data.
+Quickly visualize comma-separated data.
 
 ## Getting Started
 

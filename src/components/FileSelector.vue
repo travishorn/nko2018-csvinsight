@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Select file</h2>
+    <h2>1. Select file</h2>
     <input type="file" accept=".csv" @input="fileChange">
     <SampleData />
   </div>

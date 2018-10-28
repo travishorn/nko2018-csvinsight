@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Plot data</h2>
+    <h2>3. Visualize!</h2>
 
     <ColumnChart />
   </div>
