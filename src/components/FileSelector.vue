@@ -21,3 +21,12 @@ export default {
   },
 };
 </script>
+
+<style>
+  input[type=file] {
+    width: 100%;
+    border: dashed 2px lightgray;
+    padding: 3rem;
+    padding-left: 35%;
+  }
+</style>
